@@ -3,14 +3,16 @@ import about from "../../assets/images/about.png";
 import playicon from "../../assets/images/play-icon.png";
 import Navbar from "../Navbar/Navbar"
 
-const About = () => {
+const About = ({setPlayState}) => {
     return (
         <>
         <Navbar/>
             <div id="about" className="about container">
                 <div className="about-left">
                     <img className="about-img" src={about} ></img>
-                    <img className="play-icon-img" src={playicon} ></img>
+                    <img className="play-icon-img" src={playicon} onClick={()=>{
+                        setPlayState(true)
+                    }}  ></img>
                 </div>
                 <div className="about-right">
                     <h3>ABOUT UNIVERSITY</h3>

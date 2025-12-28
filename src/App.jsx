@@ -7,20 +7,27 @@ import Campus from './Components/Campus Section/Campus';
 import Testimonal from './Components/Testimonal Section/Testimonal';
 import Contact from './Components/Contact Section/Contact';
 import Footer from './Components/Footer Section/Footer';
+import VideoPlayer from './Components/VideoPlayerSection/VideoPlayer';
+import { useState } from 'react';
 
 
 
 function App() {
+
+
+  const [playState,setPlayState] = useState(false)
+
   return (
     <>
       <Navbar/>
       <Home/>
       <Program/>
-      <About/>
+      <About setPlayState = {setPlayState} />
       <Campus/>
       <Testimonal/>
       <Contact/>
       <Footer/>
+      <VideoPlayer playState={playState} setPlayState={setPlayState} />
       
     </>
   );
