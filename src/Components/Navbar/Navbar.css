@@ -30,7 +30,7 @@
 }
 
 .nav-container a:hover {
-  color: black;
+  color:rgb(218, 211, 211);
   transition: .2s ease;
 }
 
