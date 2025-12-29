@@ -38,6 +38,9 @@ html,body {
   justify-content: center;
   cursor: pointer;
   background-color: rgb(240,240,240);
+  text-decoration: none;
+  color: #212121;
+
 
 }
 

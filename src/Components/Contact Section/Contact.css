@@ -73,6 +73,12 @@
     }
 }
 
+@media (max-width:425px){
+    .contact-col p{
+        font-size: 14px;
+    }
+}
+
 
 
 

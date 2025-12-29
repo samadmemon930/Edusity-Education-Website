@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Navbar from "./Components/Navbar/Navbar";
@@ -18,9 +18,15 @@ function AppContent() {
 
   // 🔥 ROUTE BASED SCROLL
   useEffect(() => {
-    const sectionId = location.pathname.replace("/", "") || "home";
-    const section = document.getElementById(sectionId);
+    let sectionId = location.pathname.replace("/", "");
 
+    // ✅ default route "/"
+    if (sectionId === "") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -29,13 +35,15 @@ function AppContent() {
   return (
     <>
       <Navbar />
+
       {/* ALL SECTIONS ALWAYS PRESENT */}
-      <Home />
+     <Home />
       <Program />
       <About setPlayState={setPlayState} />
       <Campus />
       <Testimonal />
       <Contact />
+
       <Footer />
       <VideoPlayer playState={playState} setPlayState={setPlayState} />
     </>
@@ -45,7 +53,10 @@ function AppContent() {
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/home" />} />
+      {/* default */}
+      <Route path="/" element={<AppContent />} />
+
+      {/* route-based scroll */}
       <Route path="/home" element={<AppContent />} />
       <Route path="/program" element={<AppContent />} />
       <Route path="/about" element={<AppContent />} />

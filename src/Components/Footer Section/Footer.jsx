@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -8,8 +9,8 @@ const Footer = () => {
         <div className='footer'>
         <p>© 2025 Edusity. All rights reserved.</p>
         <ul>
-            <li><a href="#">Terms of Services</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><Link to="/">Terms of Services</Link></li>
+            <li><Link href="/">Privacy Policy</Link></li>
 
         </ul>
         </div>
