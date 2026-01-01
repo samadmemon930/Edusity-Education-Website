@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Navbar />
 
-      <div className="home-section container">
+      <div className="home-section container" id="home">
         <div className="home-text">
           <h1>We Ensure better education for a better world</h1>
           <p>
