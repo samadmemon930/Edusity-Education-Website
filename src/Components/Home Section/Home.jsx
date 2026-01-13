@@ -7,7 +7,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 const Home = () => {
   return (
     <>
-      <Navbar />
+
 
       <div className="home-section container" id="home">
         <div className="home-text">

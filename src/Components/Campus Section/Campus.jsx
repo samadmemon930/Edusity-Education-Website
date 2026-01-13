@@ -4,13 +4,11 @@ import gallery_2 from "../../assets/images/gallery-2.png"
 import gallery_3 from "../../assets/images/gallery-3.png"
 import gallery_4 from "../../assets/images/gallery-4.png"
 import white_arrow from "../../assets/images/white-arrow.png"
-import Navbar from "../../Components/Navbar/Navbar"
 import { Link } from "react-router-dom"
 
 const Campus = () => {
   return (
     <>
-      <Navbar />
 
       <div className="campus-section container" id="campus">
         <div className="title">

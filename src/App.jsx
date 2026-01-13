@@ -16,31 +16,18 @@ function AppContent() {
   const location = useLocation();
   const [playState, setPlayState] = useState(false);
 
-  // 🔥 Scroll to section on route change
- useEffect(() => {
-  const sectionId = location.pathname.replace("/", "") || "home";
+  // ⚡ INSTANT + SMOOTH SCROLL (NO DELAY)
+  useEffect(() => {
+    const sectionId = location.pathname.replace("/", "") || "home";
 
-  const scrollToSection = () => {
     const section = document.getElementById(sectionId);
 
     if (section) {
-      // Scroll immediately using smooth behavior
       section.scrollIntoView({ behavior: "smooth" });
     } else {
-      // fallback to top
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  };
-
-  // Use requestAnimationFrame to scroll as soon as DOM is ready
-  requestAnimationFrame(scrollToSection);
-
-  // Optional: in case images/fonts take time, also scroll on window load
-  window.addEventListener("load", scrollToSection);
-
-  return () => window.removeEventListener("load", scrollToSection);
-}, [location]);
-
+  }, [location]);
 
   return (
     <>
@@ -63,7 +50,6 @@ function AppContent() {
 function App() {
   return (
     <Routes>
-      {/* Catch all routes */}
       <Route path="/*" element={<AppContent />} />
     </Routes>
   );

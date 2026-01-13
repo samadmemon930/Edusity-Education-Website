@@ -1,12 +1,10 @@
 import "./About.css"
 import about from "../../assets/images/about.png";
 import playicon from "../../assets/images/play-icon.png";
-import Navbar from "../Navbar/Navbar"
 
 const About = ({setPlayState}) => {
     return (
         <>
-        <Navbar/>
             <div id="about" className="about container">
                 <div className="about-left">
                     <img className="about-img" src={about} ></img>
