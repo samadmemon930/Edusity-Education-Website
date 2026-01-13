@@ -12,6 +12,10 @@ import Contact from "./Components/Contact Section/Contact";
 import Footer from "./Components/Footer Section/Footer";
 import VideoPlayer from "./Components/VideoPlayerSection/VideoPlayer";
 
+// 🔥 Disable browser auto scroll restore (Vercel fix)
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
 
 function AppContent() {
   const location = useLocation();
