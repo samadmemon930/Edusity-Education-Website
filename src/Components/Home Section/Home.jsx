@@ -1,4 +1,5 @@
 import "./Home.css";
+import {Link} from "react-router-dom"
 import "/index.css";
 import dark_arrow from "../../assets/images/dark-arrow.png";
 
@@ -12,10 +13,10 @@ const Home = () => {
             Our cutting-edge curriculum is designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education
           </p>
 
-          <a href="#" className="btn">
+          <Link to="/" className="btn">
             Explore more
             <img src={dark_arrow} alt="Arrow Icon" className="arrow-icon" />
-          </a>
+          </Link>
         </div>
       </div>
     </>

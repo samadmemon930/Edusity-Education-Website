@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./Footer.css";
 
 const Footer = () => {
@@ -8,8 +9,8 @@ const Footer = () => {
         <p>© 2025 Edusity. All rights reserved.</p>
 
         <ul>
-          <li><a href="#home">Terms of Services</a></li>
-          <li><a href="#home">Privacy Policy</a></li>
+          <li><Link to="/">Terms of Services</Link></li>
+          <li><Link to="/">Privacy Policy</Link></li>
         </ul>
       </div>
     </div>
