@@ -1,22 +1,19 @@
-import React from 'react'
-import './Footer.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <>
-      <div className='footer-section container'>
-        <div className='footer'>
+    <div className="footer-section container">
+      <div className="footer">
         <p>© 2025 Edusity. All rights reserved.</p>
+
         <ul>
-            <li><Link to="/">Terms of Services</Link></li>
-            <li><Link to="/">Privacy Policy</Link></li>
-
+          <li><a href="#home">Terms of Services</a></li>
+          <li><a href="#home">Privacy Policy</a></li>
         </ul>
-        </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;

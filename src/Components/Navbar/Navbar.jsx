@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import menu_icon from "../../assets/images/menu-icon.png";
@@ -14,14 +13,14 @@ const Navbar = () => {
       <img src={logo} alt="Logo" className="logo" />
 
       <ul className={mobileMenu ? "show-menu" : "hide-mobile-menu"}>
-        <li><Link to="/home" onClick={closeMenu}>Home</Link></li>
-        <li><Link to="/program" onClick={closeMenu}>Program</Link></li>
-        <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
-        <li><Link to="/campus" onClick={closeMenu}>Campus</Link></li>
-        <li><Link to="/testimonial" onClick={closeMenu}>Testimonial</Link></li>
+        <li><a href="#home" onClick={closeMenu}>Home</a></li>
+        <li><a href="#program" onClick={closeMenu}>Program</a></li>
+        <li><a href="#about" onClick={closeMenu}>About Us</a></li>
+        <li><a href="#campus" onClick={closeMenu}>Campus</a></li>
+        <li><a href="#testimonial" onClick={closeMenu}>Testimonial</a></li>
         <li>
           <button className="btn">
-            <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
+            <a href="#contact" onClick={closeMenu}>Contact Us</a>
           </button>
         </li>
       </ul>
