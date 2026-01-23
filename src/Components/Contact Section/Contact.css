@@ -38,7 +38,7 @@
 }
 
 .contact-details img{
-    width: 25px;
+    width: 20px;
     margin-right: 10px;
 }
 
@@ -63,7 +63,7 @@
 }
 
 /* Media Query */
-@media (max-width:767px){
+@media (max-width:991px){
     .contact {
         display: block;
     }
@@ -74,6 +74,9 @@
 }
 
 @media (max-width:425px){
+    .contact-col h3{
+        font-size: 21px;
+    }
     .contact-col p{
         font-size: 14px;
     }
