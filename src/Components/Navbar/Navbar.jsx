@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import logo from "../../assets/images/logo.png";
-import menu_icon from "../../assets/images/menu-icon.png";
+// import menu_icon from "../../assets/images/menu-icon.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -26,12 +26,17 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <img
-        src={menu_icon}
-        alt="Menu"
-        className="menu-icon"
-        onClick={() => setMobileMenu(!mobileMenu)}
-      />
+      <div
+  className="menu-icon"
+  onClick={() => setMobileMenu(!mobileMenu)}
+>
+  {mobileMenu ? (
+    <i className="fa-solid fa-xmark"></i>
+  ) : (
+    <i className="fa-solid fa-bars"></i>
+  )}
+</div>
+
     </nav>
   );
 };
